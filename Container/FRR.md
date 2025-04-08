@@ -36,6 +36,7 @@ python3 frr_container.py
 
 4. 🔐 Enable BGP Daemon
    - Updates `/etc/frr/daemons` inside the container to enable BGP:
+
      ```
      echo 'bgpd=yes' > /etc/frr/daemons
      ```
