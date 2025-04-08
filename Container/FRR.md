@@ -2,7 +2,7 @@
 ## Build the Image
 To build the Docker image, run the following command in the directory containing your Dockerfile:
 ```
-docker build -t frr-ubuntu .
+docker build -f Dockerfile.frr -t frr-ubuntu .
 ```
 
 
