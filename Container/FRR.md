@@ -60,21 +60,27 @@ python3 frr_container.py
 ## Sample Interaction Flow
 ```
 Enter container name: frr1 
-Enter Docker image: frr-ubuntu 
+Enter Docker image: frr-ubuntu
+
 How many Docker networks do you want to attach? 2
+
 — Network #1 — 
 Do you want to create a new network for Network #1? (y/n): y 
 Enter new Docker network name: net1 Enter subnet (e.g., 10.10.10.0/24): 10.10.10.0/24 
 Assign IP to container in this network (based on 10.10.10.0/24): 10.10.10.2
+
 — Network #2 — 
 Do you want to create a new network for Network #2? (y/n): n 
 Available Docker networks:
-	1.	bridge (Subnet: N/A)
-	2.	net2 (Subnet: 10.20.20.0/24) 
+1.bridge (Subnet: N/A)
+2.net2 (Subnet: 10.20.20.0/24)
+
 Select a network by number: 2 
 Assign IP to container in this network (based on 10.20.20.0/24): 10.20.20.2
+
 Enter your BGP AS number: 65001 
 How many BGP neighbors do you want to configure? 1
+
 — Neighbor #1 — 
 Neighbor IP: 10.20.20.3 
 Neighbor AS number: 65002
