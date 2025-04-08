@@ -92,8 +92,11 @@ Assign IP to container in this network (based on 10.20.20.0/24): 10.20.20.2
 - **Docker Build Errors**: Ensure all dependencies are correctly installed and the Dockerfile is properly formatted.
 - **Python Script Errors**: Check for syntax errors or issues with user input handling.
 - **RYU Configuration Issues**:
+  
   Verify that the `bgp_config.conf` configuration is correct and properly applied.
+  
   Check the python version. It should be 3.9 and older.
+  
   Check the eventlet version.
 
 If you encounter any issues, review the Docker logs and the output of the Python script for clues. Adjustments might be needed based on your specific environment or requirements.
