@@ -1,0 +1,21 @@
+FROM python:3.9-slim
+
+# Install dependencies
+RUN apt-get update && apt-get install -y \
+    git \
+    net-tools \
+    iproute2 \
+    nano \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install compatible dependencies
+RUN pip install --no-cache-dir paramiko
+RUN pip install --no-cache-dir eventlet==0.30.2
+RUN pip install --no-cache-dir dnspython==1.16.0
+RUN pip install --no-cache-dir ryu
+
+# Set up workdir
+WORKDIR /root
+
+# Default command
+CMD ["/bin/bash"]
