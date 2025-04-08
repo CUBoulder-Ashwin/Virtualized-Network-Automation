@@ -44,3 +44,46 @@ python3 ryu_bgp_container.py
 5. 🔄 Run Ryu BGP Application
    - Starts the Ryu BGP application inside the container using the provided configuration.
 
+## Sample Interaction Flow
+```
+Enter local AS number: 65001
+Enter router ID (e.g., ‘10.10.10.3’): 10.10.10.3
+How many neighbors do you want to configure? 1
+
+— Neighbor #1 —
+Enter neighbor IP address: 10.20.20.3
+Enter neighbor remote AS number: 65002
+How many routes do you want to advertise? 2
+Enter route prefix #1 (e.g., ‘30.30.30.0/24’): 10.10.10.0/24
+Enter route prefix #2 (e.g., ‘30.30.30.0/24’): 10.20.20.0/24
+
+Enter SSH username (e.g., ‘ryu’): ryu
+Enter SSH password (e.g., ‘ryu’): ryu
+
+Enter container name: ryu1
+Enter Docker image (e.g., ‘ryu-sdn-controller’): ryu-sdn-controller
+How many Docker networks do you want to attach? 2
+
+— Network #1 —
+Create new network for Network #1? (y/n): y
+Enter new Docker network name: net1
+Enter subnet (e.g., ‘10.10.10.0/24’): 10.10.10.0/24
+Assign IP to container in this network (based on 10.10.10.0/24): 10.10.10.2
+
+— Network #2 —
+Create new network for Network #2? (y/n): n
+Available Docker networks:
+1. bridge (Subnet: N/A)
+2. net2 (Subnet: 10.20.20.0/24)
+Select a network by number: 2
+Assign IP to container in this network (based on 10.20.20.0/24): 10.20.20.2
+```
+
+---
+
+💡 Requirements
+- **Docker** (and Docker Engine running)
+- **Python 3.x**
+- Basic networking understanding (for BGP, IP ranges, subnets)
+
+---
