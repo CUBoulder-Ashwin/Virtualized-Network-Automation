@@ -98,6 +98,11 @@ Enter networks to advertise: 10.10.10.0/24,10.20.20.0/24: 20.20.20.0/24
 ## 🚨 Troubleshooting
 - **Docker Build Errors**: Ensure all dependencies are correctly installed and the Dockerfile is properly formatted.
 - **Python Script Errors**: Check for syntax errors or issues with user input handling.
-- **FRR Configuration Issues**: Verify that the generated FRR configuration is correct and properly applied.
+- **FRR Configuration Issues**:
+  Verify if the `/etc/frr/frr.config` is correct and properly applied.
+
+  Verify if the `bgpd=yes` in `/etc/frr/daemons`.
+
+  Verify the route map in the bgp configuration.
 
 If you encounter any issues, review the Docker logs and the output of the Python script for clues. Adjustments might be needed based on your specific environment or requirements.
