@@ -57,6 +57,7 @@ python3 frr_container.py
 7. 🔄 Restart & Verify FRR
    - Restarts the FRR service inside the container.
    - Shows the running BGP configuration using:
+     
      ```
      vtysh -c "show running-config"
      ```
