@@ -1,16 +1,16 @@
+# What is happening?
 
-### ✅ Build the Image
+## Build the Image
 To build the Docker image, run the following command in the directory containing your Dockerfile:
 
-
-## 🐍 Run the Python Script
+## Run the Python Script
 The script (`frr_container.py`) guides you through setting up the FRR container, networks, and BGP configuration.
+```
+python3 frr_container.py
+```
 
-▶️ Run the Script
 
-
-
-🧭 What the Script Does (Step-by-Step)
+# What the Script Does (Step-by-Step)
 1. 🚀 Container Initialization
    - Prompts the user to enter:
      - A container name.
