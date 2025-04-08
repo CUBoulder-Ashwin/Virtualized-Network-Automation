@@ -58,6 +58,7 @@ python3 frr_container.py
 
 
 ## Sample Interaction Flow
+```
 Enter container name: frr1 
 Enter Docker image: frr-ubuntu 
 How many Docker networks do you want to attach? 2
@@ -78,7 +79,7 @@ How many BGP neighbors do you want to configure? 1
 Neighbor IP: 10.20.20.3 
 Neighbor AS number: 65002
 Enter networks to advertise: 10.10.10.0/24,10.20.20.0/24: 20.20.20.0/24
-
+```
 ---
 
 ## 💡 Requirements
