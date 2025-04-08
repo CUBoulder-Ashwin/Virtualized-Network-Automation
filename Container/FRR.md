@@ -1,4 +1,8 @@
 # FRR Routing
+This python file automates the deployment of FRR router inside Docker containers using a Python script. It simplifies container creation, Docker network configuration, and BGP setup via user inputs—making it easy to spin up full routing topologies without manually editing config files.
+
+---
+
 ## Build the Image
 To build the Docker image, run the following command in the directory containing your Dockerfile:
 ```
