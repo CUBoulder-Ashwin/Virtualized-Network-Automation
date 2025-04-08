@@ -5,6 +5,7 @@ To build the Docker image, run the following command in the directory containing
 docker build -t frr-ubuntu .
 ```
 
+
 ## Run the Python Script
 The script (`frr_container.py`) guides you through setting up the FRR container, networks, and BGP configuration.
 ```
@@ -55,7 +56,8 @@ python3 frr_container.py
      vtysh -c "show running-config"
      ```
 
-🧾 Sample Interaction Flow
+
+## Sample Interaction Flow
 Enter container name: frr1 
 Enter Docker image: frr-ubuntu 
 How many Docker networks do you want to attach? 2
@@ -77,46 +79,12 @@ Neighbor IP: 10.20.20.3 
 Neighbor AS number: 65002
 Enter networks to advertise: 10.10.10.0/24,10.20.20.0/24: 20.20.20.0/24
 
+---
 
 💡 Requirements
 - **Docker** (and Docker Engine running)
 - **Python 3.x**
 - Basic networking understanding (for BGP, IP ranges, subnets)
-
----
-
-## 📝 Python Script Overview
-The Python script automates several tasks:
-- **Running Docker commands**: It uses `subprocess` to execute Docker commands for creating networks, running containers, and configuring FRR.
-- **User Input**: It prompts the user for necessary inputs like container name, Docker image, network settings, and BGP configuration.
-- **Network Setup**: It allows users to create new networks or select existing ones and assign IP addresses.
-- **BGP Configuration**: It configures BGP settings, including AS numbers, neighbors, and advertised networks.
-
-Here's a snippet of the script's structure:
-def setup_frr_container(): 
-Get user inputs 
-```
-name = input(“Enter container name: “) 
-image = input(“Enter Docker image (e.g., frr-ubuntu): “)
-```
-Network setup
-```
-net_count = get_valid_int("\nHow many Docker networks do you want to attach? ")
-networks_info = []
-```
-BGP configuration
-```
-bgp_as = input("\nEnter your BGP AS number: ")
-neighbor_count = get_valid_int("How many BGP neighbors do you want to configure? ")
-```
-Generate FRR configuration
-```
-frr_conf = generate_frr_config(bgp_as, neighbors, advertised_nets)
-```
-Run container and configure FRR
-```
-run_cmd(f"docker run -dit --privileged --name {name} --network {networks_info} --ip {networks_info} {image} /bin/bash")
-```
 
 ---
 
