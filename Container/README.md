@@ -1,7 +1,8 @@
-# What is happening?
-
 ## Build the Image
 To build the Docker image, run the following command in the directory containing your Dockerfile:
+```
+docker build -t frr-ubuntu .
+```
 
 ## Run the Python Script
 The script (`frr_container.py`) guides you through setting up the FRR container, networks, and BGP configuration.
