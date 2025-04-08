@@ -39,10 +39,10 @@ Select an option (1-4) or type 'exit':
 
 ### Server
 ```
-Virtual Networking Automation Main menu
-1. Network
-2. Router
-3. Server
-4. Security Group
-Select an option (1-5) or type 'exit':
+Virtual Server menu
+1. Create
+2. Delete
+3. List
+4. Main menu
+Select an option (1-4) or type 'exit':
 ```
