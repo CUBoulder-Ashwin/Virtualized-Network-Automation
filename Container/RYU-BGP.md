@@ -84,7 +84,7 @@ Assign IP to container in this network (based on 10.20.20.0/24): 10.20.20.2
 ## 💡 Requirements
 - **Docker** (and Docker Engine running)
 - **Python 3.9**
-- **Paramiko**
+- **Paramiko** - to SSH into the bgp engine and check the configurations
 - Basic networking understanding (for BGP, IP ranges, subnets)
 
 ---
