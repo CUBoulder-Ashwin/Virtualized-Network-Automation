@@ -17,5 +17,30 @@ The script (`ryu_bgp_container.py`) guides you through setting up the Ryu BGP co
 python3 ryu_bgp_container.py
 ```
 
+## What the Script Does (Step-by-Step)
+1. 📝 Create BGP Configuration
+   - Prompts the user to enter:
+     - Local AS number.
+     - Router ID.
+     - Number of neighbors and their details.
+     - Routes to advertise.
+     - SSH credentials.
+   - Generates a BGP configuration file (`bgp_config.conf`).
 
+2. 🌐 Docker Network Setup
+   - Asks how many Docker networks you want to connect.
+   - For each network:
+     - Option to create a new network with a specified subnet.
+     - Or select an existing Docker network from a displayed list.
+     - You assign an IP to the container in that network.
+
+3. 📦 Container Deployment
+   - Creates the Docker container with the first network and IP.
+   - Connects it to all additional networks with specified IPs.
+
+4. 📁 Copy Config to Container
+   - Copies the generated BGP configuration file into the container.
+
+5. 🔄 Run Ryu BGP Application
+   - Starts the Ryu BGP application inside the container using the provided configuration.
 
